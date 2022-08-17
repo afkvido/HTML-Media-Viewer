@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HTML Media Viewer</title>
+    </head>
+
+    <body>
+        <h1>HTML Media Viewer</h1>
+        <p>This is a viewer for HTML5 media.</p>
+        <input id="URL" type="text"/>
+        <button id="play">Play</button>
+        <video id="Video"></video>
+    </body>
+
+    <script>
+        let video = document.getElementById("Video");
+        let url = document.getElementById("URL");
+        let button = document.getElementById("play");
+
+        button.addEventListener("click", function() {
+            video.setAttribute("src", url.value);
+            video.setAttribute("controls", "controls");
+            video.play();
+        });
+    </script>
+</html>
